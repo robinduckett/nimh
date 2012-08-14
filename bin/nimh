@@ -1,0 +1,26 @@
+#!/usr/bin/env node
+
+var express = require('express')
+var program = require('commander');
+var http = require('http');
+
+program
+  .version('0.0.1')
+  .option('-p, --port [port]', 'Port to run on')
+  .parse(process.argv);
+  
+  
+var port = program.port || 8081;
+
+var app = express();
+
+app.configure(function(){
+  app.set('port', port);
+  app.use(express.favicon());
+  app.use(express.directory(process.cwd()));
+  app.use(express.static(process.cwd()));
+});
+
+http.createServer(app).listen(app.get('port'), function(){
+  console.log("NIHM Listening on http://0.0.0.0:" + app.get('port') + '/');
+});

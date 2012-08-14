@@ -1,0 +1,22 @@
+{
+  "author": "Robin Duckett <rduckett@xumo.com> (http://www.github.com/robinduckett)",
+  "name": "nimh",
+  "description": "Static file server w/ directory listing",
+  "version": "0.0.1",
+  "homepage": "http://www.github.com/robinduckett/nimh",
+  "repository": {
+    "url": "git://github.com/robinduckett/nimh.git"
+  },
+  "dependencies": {
+      "commander": "1.0.1",
+      "express": "3.x.x"
+  },
+  "devDependencies": {},
+  "optionalDependencies": {},
+  "engines": {
+    "node": "*"
+  },
+  "bin": {
+      "nimh": "./bin/nimh"
+  }
+}
