@@ -4,7 +4,7 @@ Static file server with directory listing. Running this will start an express ba
 
 ## version
 
-Version 0.0.1
+Version 0.0.2
 
 ## installing
 
